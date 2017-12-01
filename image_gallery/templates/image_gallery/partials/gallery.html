@@ -10,16 +10,7 @@
 <section class="gallery-space">
     {% for image in gallery.get_folder_images %}
         <a class="example-image-link" href="{% thumbnail image.file 1024x1020 %}" data-lightbox="example-1">
-            <div class="gallery"><img src="{% thumbnail image.file 180x180 crop upscale %}"><span>View</span></div>
+            <div class="gallery"><img src="{% thumbnail image.file 400x400 crop upscale %}"><span>View</span></div>
         </a>
     {% endfor %}
 </section>
-    <!-- 
-<h1>{{ gallery.title }}</h1>
-<h2>{% if gallery.date %}{{ gallery.date|date }}, {% endif %}{{ gallery.location }}</h2>
-<p>{% render_placeholder gallery.description "description" %}</p>
-<ul class="image-gallery {{ display_type }}">
-    {% for image in gallery.get_folder_images %}
-        <li><img src="{% thumbnail image.file 200x200 crop upscale %}" alt=""></li>
-    {% endfor %}
-</ul> -->
