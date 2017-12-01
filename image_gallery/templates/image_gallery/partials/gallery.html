@@ -9,7 +9,7 @@
 </section>
 <section class="gallery-space">
     {% for image in gallery.get_folder_images %}
-        <a class="example-image-link" href="{% thumbnail image.file %}" data-lightbox="example-1">
+        <a class="example-image-link" href="{% thumbnail image.file 760x480 %}" data-lightbox="example-1">
             <div class="gallery"><img src="{% thumbnail image.file 200x200 crop upscale %}"><span>View</span></div>
         </a>
     {% endfor %}
