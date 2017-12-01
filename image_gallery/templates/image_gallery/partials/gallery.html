@@ -3,14 +3,14 @@
     <header class="accommodation"> 
         <h2>Gallery</h2>
         <p>
-              
+            {% render_placeholder gallery.description "description" %}   
         </p>
     </header>
 </section>
 <section class="gallery-space">
     {% for image in gallery.get_folder_images %}
-        <a class="example-image-link" href="{% thumbnail image.file 760x480 %}" data-lightbox="example-1">
-            <div class="gallery"><img src="{% thumbnail image.file 200x200 crop upscale %}"><span>View</span></div>
+        <a class="example-image-link" href="{% thumbnail image.file 1024x1020 %}" data-lightbox="example-1">
+            <div class="gallery"><img src="{% thumbnail image.file 180x180 crop upscale %}"><span>View</span></div>
         </a>
     {% endfor %}
 </section>
