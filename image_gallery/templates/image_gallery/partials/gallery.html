@@ -1,4 +1,20 @@
 {% load i18n thumbnail cms_tags %}
+<section id="banner">
+    <header class="accommodation"> 
+        <h2>Gallery</h2>
+        <p>
+              
+        </p>
+    </header>
+</section>
+<section class="gallery-space">
+    {% for image in gallery.get_folder_images %}
+        <a class="example-image-link" href="{% thumbnail image.file %}" data-lightbox="example-1">
+            <div class="gallery"><img src="{% thumbnail image.file 200x200 crop upscale %}"><span>View</span></div>
+        </a>
+    {% endfor %}
+</section>
+    <!-- 
 <h1>{{ gallery.title }}</h1>
 <h2>{% if gallery.date %}{{ gallery.date|date }}, {% endif %}{{ gallery.location }}</h2>
 <p>{% render_placeholder gallery.description "description" %}</p>
@@ -6,4 +22,4 @@
     {% for image in gallery.get_folder_images %}
         <li><img src="{% thumbnail image.file 200x200 crop upscale %}" alt=""></li>
     {% endfor %}
-</ul>
+</ul> -->
